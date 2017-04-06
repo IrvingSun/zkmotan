@@ -12,6 +12,6 @@ public class ClientZK {
     public static void main(String[] args) {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:motan_client_zk.xml");
         FooService fooService = (FooService) applicationContext.getBean("remoteService");
-        System.out.println(fooService.hello("Irving Sun00"));
+        System.out.println(fooService.hello("Irving Sun00x"));
     }
 }

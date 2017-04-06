@@ -10,8 +10,9 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  */
 public class ServerZK {
     public static void main(String[] args) {
-        MotanSwitcherUtil.setSwitcherValue(MotanConstants.REGISTRY_HEARTBEAT_SWITCHER,true);
+
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:motan_service_zk.xml");
+        MotanSwitcherUtil.setSwitcherValue(MotanConstants.REGISTRY_HEARTBEAT_SWITCHER,true);
         System.out.println("Server start...");
     }
 }

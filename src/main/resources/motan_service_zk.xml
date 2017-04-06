@@ -7,8 +7,9 @@
 
     <bean id="serviceImpl" class="quickstart.FooServiceImpl" />
     <bean id="cleverServiceImpl" class="quickstart.CleverServiceImpl" />
+
     <motan:registry address="127.0.0.1:2181" regProtocol="zookeeper" name="myzk"></motan:registry>
 
-    <motan:service interface="quickstart.FooService" ref="serviceImpl" registry="myzk" export="8080" />
-   <!-- <motan:service interface="quickstart.FooService" ref="cleverServiceImpl" registry="myzk" group="y" export="8080" shareChannel="true"/>-->
+    <motan:service interface="quickstart.FooService" ref="serviceImpl" registry="myzk" group="x" export="8080" accessLog="true" shareChannel="true"/>
+    <motan:service interface="quickstart.FooService" ref="cleverServiceImpl" registry="myzk" group="y" export="8080" shareChannel="true"/>
 </beans>
